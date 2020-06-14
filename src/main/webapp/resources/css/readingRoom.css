@@ -1,0 +1,425 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#readingRoomWholeWrapper {
+	width: 1900px;
+	height: 980px;
+	
+	position: relative;
+	/* opacity: 0.2; */
+}
+
+#readingRoomWrapper {
+	background-color: #f9f9f9;
+	/* display: inline-block; */
+	width: 1400px;
+	height: 950px;
+	margin: auto;
+}
+
+#readingRoomHeadWrapper {
+	width: 1400px;
+	height: 110px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-top: 10px;
+	padding-left: 25px;
+	padding-right: 25px;
+	display:
+}
+
+#libLogo {
+	/* display: inline; */
+	width: 33%;
+	padding-top: 10px;
+}
+
+#libLogo img {
+	vertical-align: middle;
+	width: 400px;
+}
+
+#readingRoomTitle {
+	/* display: inline; */
+	font-size: 30px;
+	width: 33%;
+	text-align: center;
+	padding-top: 20px;
+	font-weight: bold;
+}
+
+#right {
+	/* float: right; */
+	padding-right: 25px;
+	width: 33%;
+	text-align: right;
+	padding-top: 10px;
+}
+#userInfo{
+	padding-right: 30px;
+	font-size: 30px;
+	font-weight: bold;
+}
+#currentTime {
+	border-style: none;
+	width: 190px;
+	background-color: #f9f9f9;
+	padding-right: 30px;
+}
+
+#currentTime:focus {
+	outline: none;
+}
+
+#seatInfo {
+	display: flex;
+	justify-content: space-between;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-bottom: 10px;
+}
+
+#seatType {
+	/* float: right; */
+	
+}
+
+#readingRoomBodyWrapper {
+	width: 1350px;
+	height: 700px;
+	padding-top: 70px;
+	background-color: #2d2d2d;
+	margin: 0 auto;
+	border-radius: 8px;
+	/*             position: relative; */
+}
+
+#seatChart {
+	display: grid;
+	width: 1000px;
+	height: 90%;
+	margin: 0 auto;
+	/*             position: relative; */
+	/*             top: 35px; */
+	/*             left: 35px; */
+	background-color: white;
+	align-content: space-around;
+	grid-template-rows: 157.5px 157.5px 157.5px 157.5px;
+	grid-template-columns: repeat(3, 1fr);
+	align-items: center;
+	justify-items: center;
+	border-radius: 8px;
+}
+
+.seatChartGroup {
+	width: 120px;
+	height: 90px;
+	/* justify-content: space-around; */
+	display: flex;
+	flex-wrap: wrap;
+	/* grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(3,1fr); */
+}
+.red{
+	background-color: #bb0000;
+}
+.seatNum {
+	border: 1px solid #bbbbbb;
+	width: 58px;
+	border-radius: 8px;
+	text-align: center;
+	color: white;
+	background-color: #254d1e;
+	padding-top: 6px;
+}
+.seatNum:hover {
+	background-color: #2ba8cc;
+	cursor:pointer;
+}
+
+#selectSeatWrapper {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	width: 0px;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+#selectSeat {
+	position: absolute;
+	/* 	width:500px; */
+	/* 	height: 500px; */
+	width: 0px;
+	height: 0px;
+	background-color: white;
+	margin: 0 auto;
+	left: 650px;
+	top: 200px;
+	display: none;
+	border-radius: 8px;
+}
+
+#selectSeatTop {
+	width: 600px;
+	height: 50px;
+	border-bottom: 2px solid black;
+}
+
+#selectedSeat {
+	width: 530px;
+	height: 50px;
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+	float: left;
+}
+#selectedSeat input{
+	border-style: none;
+	font-size: 25px;
+	outline: none;
+	text-align: center;
+	font-weight: bold;
+	width: 100px;
+}
+
+
+
+#selectSeatBodyTop input {
+	outline: none;
+	font-size: 30px;
+	
+}
+
+#closeIcon {
+	height: 50px;
+	width: 50px;
+	display: inline-block;
+	float: right;
+	
+}
+
+.xi-close-square-o {
+	display: block;
+	float: right;
+}
+#userName{
+	display: inline-block;
+	
+}
+#userName::after{
+	ontent: " | ";
+}
+#selectSeatBody{
+	width: 600px;
+	height: 450px;
+	
+	
+}
+#selectSeatBodyTop{
+	width: 600px;
+	height: 200px;
+	float: left;
+	display: flex;
+	justify-content: space-around;
+	position: relative;
+}
+
+#selectSeatBodySETime{
+	width: 400px;
+	height: 250px;
+	display: inline-block;
+	float: left
+	
+}
+
+.hourDiv{
+position: relative;
+
+display: inline-block;
+width: 150px;
+height: 180px;
+top: 20px;
+
+}
+.hour{
+	width: 100px;
+	height: 120px;
+	position: absolute;
+	top: 25px;
+	right: 0px;
+	border: 2px solid black;
+	border-radius: 10px;
+	text-align: center;
+	
+	
+}
+.colonDiv{
+	position: relative;
+
+display: inline-block;
+width: 150px;
+height: 180px;
+top: 20px;
+}
+.colon{
+	width: 100px;
+	height: 120px;
+	font-size: 150px;
+	font-weight: bold;
+	top: 25px;
+	position: absolute;
+	left: 23px;
+	text-align: center;
+	border-style: none;
+}
+.minuteDiv{
+	position: relative;
+display: inline-block;
+width: 150px;
+height: 180px;
+top: 20px;
+
+
+}
+.minute{
+	position: absolute;
+	width: 100px;
+	height: 120px;
+	top: 25px;
+	border: 1px solid black;
+    right: 90px;
+    text-align: center;
+    border: 2px solid black;
+	border-radius: 10px;
+}
+.rClockBtnDiv{
+position: relative;
+
+width: 150px;
+height: 180px;
+top: 20px;
+
+}
+.rClockBtn1{
+	width: 120px;
+	height: 50px;
+	position: absolute;
+	top: 20px;
+	border-radius: 10px;
+	right: 70px;
+	
+}
+.rClockBtn2{
+	width: 120px;
+	height: 50px;
+	position: absolute;
+	top: 90px;
+	border-radius: 10px;
+	right: 70px;
+}
+.currentTimeDiv{
+
+height: 125px;
+position: relative;
+
+}
+#selectSeatCurrentTime{
+	display: block;
+	width: 300px;
+	text-align: center;
+	height: 50px;
+	font-size: 20px;
+	position: absolute;
+	top: 60px;
+	left: 50px;
+	border: 2px solid black;
+	border-radius: 10px;
+	
+}
+.endTimeDiv{
+			
+			
+	height: 125px;
+	position: relative;
+	
+	
+	
+			}
+#selectSeatEndTime{
+	display: block;
+	margin: 0 auto;
+	width: 300px;
+	text-align: center;
+	height: 50px;
+	font-size: 30px;
+	margin: 0 auto;
+	font-size: 20px;
+	position: absolute;
+	top: 30px;
+	left: 50px;
+	border: 2px solid black;
+	border-radius: 10px;
+}
+.regBtn1Div{
+
+	display: inline-block;;
+	    width: 200px;
+    height: 250px;
+    position: relative;
+	
+}
+.regBtn1{
+	width: 150px;
+    height: 100px;
+    border-radius: 10px;
+    position: absolute;
+    top: 75px;
+        font-size: 30px;
+    font-weight: bold;
+}
+
+#signOutWrapper {
+	width: 150px;
+	height: 100px;
+	background-color: #708098;
+	color: white;
+	border-radius: 8px;
+	text-align: center;
+	font-size: 40px;
+	padding-top: 30px;
+	margin-bottom: 35px;
+	border: 2px solid #556377;
+}
+#signOutWrapper:hover{
+	background-color: #424d5e;
+	cursor: pointer;
+}
+
+#signOutWrapper a{
+	text-decoration: none;
+	color: inherit;
+	
+}
+#signOutWrapper a:hover {
+	text-decoration: none;
+	color: inherit;
+}
+#seatAvail{
+	width: 20px;
+	height: 20px;
+	background-color: #468a33;
+	border-style: none;
+}
+#seatNotAvail{
+	width: 20px;
+	height: 20px;
+	background-color: red;
+	border-style: none;
+}

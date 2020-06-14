@@ -1,0 +1,464 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Noto Sans', '나눔고딕', 'NanumGothic', 'Helvetica',
+		'sans-serif';
+}
+
+#header{
+	width: 100%;
+	margin: 0 auto;
+	z-index: 500 !important;
+}
+
+header h3 {
+	font-size: 25px;
+	color: #46B7D9;
+}
+
+
+header a {
+	text-decoration: none;
+	color: inherit;
+}
+
+header a:hover {
+	text-decoration: none;
+	color: inherit;
+}
+
+#headerWrapper {
+	width: 100%;
+	margin: 0 auto;
+/* 	z-index: absolute; */
+}
+
+
+
+#headerTopWrapper {
+	margin: 0 auto;
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+#headerTop {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+#siteMenu {
+	text-align: right;
+	padding-top: 10px;	
+}
+
+#siteMenu li {
+	/* font-style: normal; */
+	font-weight: bold;
+	font-size: 18px;
+}
+.login form{
+	display: inline;
+}
+.headerlogout{
+	border: none !important;
+	background: none !important;
+}
+#libraryShortcut {
+	text-align: left;
+	float: left;
+	/* width: 500px; */
+}
+
+.dropdownbtn {
+	width: 160px;
+	height: 45px;
+	background-color: white;
+	
+	
+}
+
+.dropdownbtn a::after {
+	content: "\25BC";
+}
+
+#dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	width: 200px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 9999999;
+}
+
+#dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+#dropdown-content a:hover {
+	background-color: darkgoldenrod;
+}
+
+#libraryShortcut:hover .dropdownbtn {
+	background-color: #3e8e41;
+}
+
+.dropdown:hover #dropdown-content {
+	display: block;
+}
+
+#siteMenu li::before {
+	content: "|";
+	padding-right: 10px;
+}
+
+#siteMenu li {
+	display: inline;
+	list-style: none;
+	margin-right: 10px;
+}
+
+#siteMenu li:first-child::before {
+	content: none;
+}
+
+#headerMid {
+	margin: 0 auto;
+	height: 120px;
+	width: 1200px;
+	text-align: center;
+	padding-right: 100px
+}
+
+#logo {
+	padding-top: 32px;
+	float: left;
+	padding-left: 100px
+}
+
+#topSearchBarDiv {
+	margin-top: 25px;
+	display: inline-block;
+	width: 35em;
+	border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+#topSearchBarInput {
+	width: 430px;
+	height: 53px;
+	border-style: none;
+	float: left;
+	font-size: 17px;
+	padding-left: 10px;
+	outline: none;
+}
+
+/* #topSearchBtn {
+            padding-left: 10px;
+        } */
+#searchBtn {
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+#topSearchBarBtn {
+	border: 0;
+	outline: 0;
+	background-color: white;
+	padding-left: 5px;
+	padding-top: 10px;
+}
+
+#navBarWrapper {
+	width: 100%;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+	height: 41px;
+	/* overflow: hidden; */
+}
+
+
+#navBar1 {
+	height: 40px;
+	width: 1200px;
+	margin: 0 auto;
+	text-align: center;
+	/* overflow: hidden; */
+}
+
+/* 이게 각각의 li요소의 크기임. 첫번째 메인 메뉴의 높이도 이거에 상관 받음. */
+#navBar1 #navBarMain li {
+	width: 240px;
+	height: 40px;
+	list-style: none;
+	float: left;
+}
+
+#navBarMain {
+	height: 40px;
+	background-color: white;
+	overflow: hidden;
+	transition: height .5s;
+}
+
+#navBarMain:hover {
+	height: 300px;
+	background-color: rgb(250, 250, 250);
+	z-index: 999;
+}
+
+/* 이게 첫번째 메인 메뉴의 높이임. 도서관소개,자료검색,신청서비스,도서관소식,나만의도서관 */
+/* 이게 마우스 호버 영역을 만듬. 이 영역이 너무 크거나 작으면 호버가 제대로 안될 수 있음. */
+#navBar1 #navBarMain>li {
+	/* height:70px; */
+	font-size: 25px;
+	font-style: normal;
+	font-weight: bold;
+}
+
+/* 이걸로 메인메뉴와 서브메뉴 사이의 첫번째 간격을 조정할 수 있음. */
+#navBar1 .navBarSub {
+	/* position: absolute; */
+	/* top: 50px; */
+	/* padding-top: 20px; */
+	left: 0px;
+	width: 100%;
+}
+
+#navBar1 ul {
+	list-style: none;
+	position: relative;
+	margin: 0 auto;
+}
+
+#navBar1 #navBarMain>li {
+	float: left;
+}
+
+#navBar1 #navBarMain:hover .navBarSub {
+	display: block;
+}
+
+#navBar1 #navBarMain:hover .navBar2, li{
+	display: block;
+	z-index: 99999;
+	/* height: 300px; */
+	/* transition: height 2s; */
+	/* width: 1200px; */
+}
+
+.navBarSub li {
+	font-size: 16px;
+	font-weight: lighter;
+}
+
+.navBarSub {
+/* 	font-size: 16px; */
+/* 	font-weight: lighter; */
+/* 	top: 7px; */
+/* 	border-top: 1px solid rgba(0, 0, 0, 0.3); */
+ font-size: 16px;
+font-weight: lighter;
+top: 4px;
+border-top: 1px solid  rgba(0, 0, 0, 0.3);
+}
+
+.navBar2 {
+	width: 100%;
+	/* margin-top: 18px; */
+	background-color: red;
+	height: 0px;
+	border: 2px solid black;
+	display: none;
+	margin-top: 8px;
+	z-index: 99999;
+}
+
+/* ================================================================================== */
+/* =====================navBar 고치는중==================== */
+.jbFixed {
+	position: fixed;
+	top: 0px;
+	/* background-color: olive; */
+	height: 40px;
+	/* padding-bottom: 10px; */
+	margin-top: 0px;
+	border-bottom: none !important;
+	/* border-bottom: 1px solid gray; */
+	z-index: 500 !important;
+}
+
+.jbOffset2 {
+	position: fixed;
+	top: 0px;
+	background-color: #46B7D9;
+	height: 40px;
+	/* padding-bottom: 10px; */
+	margin-top: 0px;
+	
+}
+
+.navBarLi:hover {
+	background-color: #46B7D9;
+	border-bottom: 2px solid black;
+}
+
+.navBarLiSub:hover {
+	font-weight: 900;
+}
+
+/* 컨텐츠타이틀 */
+.content_core {
+	width: 880px;
+	position: relative;
+	margin-bottom:30px;
+	right: 0px;
+	z-index: 200px !important;
+}
+
+.content_title {
+	overflow: hidden;
+	position: relative;
+	min-height: 160px;
+	width: 880px;
+	height: 161px;
+	padding: 0;
+	
+}
+/*로그인 아이콘 감싸주는 폼 CSS*/
+
+.content_title h3::before {
+	content: "";
+	position: absolute;
+	top: 30px;
+	width: 25px;
+	height: 4px;
+	background: #333;
+}
+/*로그인 위에 선 CSS */
+.content_title h3 {
+	font-size: 30px;
+	width: 880px;
+	height: 50px;
+	margin: 30px 0px 0px;
+	margin-bottom: 20px;
+	padding: 20px 0px 0px;
+}
+/*로그인 텍스트 CSS*/
+.logoPw_nav{
+	font-size: 16px;
+	color: #666;
+	height: 52px;
+	line-height: 52px;
+	border-top: 1px solid #e2e2e2; 
+	border-bottom: 1px solid #e2e2e2; 	
+}
+/* 사이드 */
+body {
+	font-family: 'Noto Sans', '나눔고딕', 'Nanum Gothic', 'Helvetica',
+		sans-serif;
+}
+
+/*전체 폰트 설정*/
+h1, h2, h3, h4, h5, p, div, span, ul, li, ol, img, a, a:visited {
+	margin: 0px;
+	padding: 0px;
+}
+/*margin padding 0 설정*/
+.navArea {
+	width: 270px;
+	float: left;
+}
+/*왼쪽 네비게이션 바 전체*/
+.navArea h2 {
+	font-weight: normal;
+	font-size: 2.188em;
+	line-height: 160px;
+	color: #fff;
+	text-align: center;
+	margin: 0px;
+	background-image: url("../img/mainPage/lnbNav_bg.jpg");
+}
+
+/*네비게이션 상단바*/
+ul.lnb {
+	width: 270px;
+	border: 1px solid #E2E2E2;
+	word-break: keep-all;
+	padding: 0px;
+}
+
+ul.lnb ul, ul.lnb li{
+	list-style: none;
+}
+
+/*li태그 on off*/
+.Nav_li_on {
+	width: 270px;
+	padding: 10px 20px 10px 0;
+	font-size: 20px;
+	background: #46B7D9;
+	border: 1px solid #E2E2E2;
+}
+.Nav_li_on_haveMenu {
+	width: 270px;
+	padding: 10px 20px 0 0;
+	font-size: 20px;
+	background: #46B7D9;
+	border: 1px solid #E2E2E2;
+}
+.Nav_li_off {
+	width: 270px;
+	padding: 10px 20px 10px 0;
+	font-size: 20px;
+	color: #464646;
+	border: 1px solid #E2E2E2;
+}
+/* ///////////////////////////////// */
+/* a태그 on off */
+.Nav_select {
+	width: 270px;
+	font-size: 20px;
+	padding: 10px 20px;
+	text-decoration-color: black;
+	color: white;
+	font-weight: bold;
+}
+
+.Nav_non {
+	width: 270px;
+	font-size: 20px;
+	padding: 10px 20px;
+	text-decoration-color: black;
+	color: #464646;
+}
+
+.submenu{
+	width: 268px;
+	padding: 10px 20px;
+	margin-top: 10px;
+	border-right: 1px solid #d8d8d8;
+	background-color: #f5f5f5;
+}
+.submenu a{
+	font-size: 18px;
+}
+.submenuSelect{
+	font-weight: bold;
+}
+/* ///////////////////////////////// */
+.glyph-m {
+	float: right;
+	color: white;
+}
+
+.glyph-p {
+	float: right;
+	color: #464646;
+}
+/* 사이드 설정 끝 */
